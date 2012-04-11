@@ -222,7 +222,13 @@ public class DownloadServiceLifecycleSupport {
             case KeyEvent.KEYCODE_MEDIA_STOP:
                 downloadService.reset();
                 break;
-            default:
+			case KeyEvent.KEYCODE_MEDIA_PLAY:
+				downloadService.start();
+				break;
+			case KeyEvent.KEYCODE_MEDIA_PAUSE:
+				downloadService.pause();
+				break;
+			default:
                 break;
         }
     }
